@@ -1,0 +1,31 @@
+<h1>My Games</h1>
+
+<!-- <ul class="games">
+    <li *ngFor="let game of games">
+        <div>
+            <a routerLink="/games/detail/{{game.id}}">
+                <span class="badge">{{game.id}}</span> {{game.name}}
+            </a>
+        </div>    
+    </li>
+</ul> -->
+
+<div class="board">
+    <div class="card-list mat-elevation-z1" *ngFor="let game of games">
+
+        <div class="card-list-content" 
+            cdkDropList [id]="game.id" 
+            [cdkDropListData]="games" 
+            (cdkDropListDropped)="onGameDrop($event)">
+    
+            <mat-card cdkDrag>
+                <mat-card-content>
+                    <h2>{{game.name}}</h2>
+                    {{game.id}}
+                </mat-card-content>
+            </mat-card>
+        </div>
+    
+    </div>
+</div>
+
