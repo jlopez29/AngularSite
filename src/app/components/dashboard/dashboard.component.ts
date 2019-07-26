@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getGames():void{
-    this.gameServivce.getGames().subscribe(games => this.games = games.slice(1,5))
+    this.gameServivce.getGames().subscribe(games => this.games = games.slice(0,4))
   }
 
 }

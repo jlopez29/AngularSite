@@ -1,6 +1,6 @@
 import {Game} from '../models/game'
 
-export const GAMES : Game[] = 
+export var GAMES : Game[] = 
 [
     {
       id: 1,
@@ -47,4 +47,4 @@ export const GAMES : Game[] =
       name: 'INSURGENCY'
     }
     
-  ]
+]
